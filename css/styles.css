@@ -77,11 +77,6 @@ label {
   border-radius: 4px;
 }
 
-.replacedimg {
-  object-fit: contain;
-  object-position: 50% 50%;
-}
-
 .row2 button {
   background-color: rgb(86, 43, 128);
   color: #fff;
