@@ -27,6 +27,3 @@ function handleInputEvent(event) {
 
 $form.addEventListener('submit', handleSubmit);
 $avatarURL.addEventListener('input', handleInputEvent);
-window.addEventListener('beforeunload', function (event) {
-  localStorage.setItem('profileDataModel', JSON.stringify(data.profile));
-});
