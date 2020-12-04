@@ -5,7 +5,6 @@ var $userName = document.querySelector('#user-name');
 var $fullName = document.querySelector('#full-name');
 var $location = document.querySelector('#location');
 var $bio = document.querySelector('#bio');
-console.log(data);
 
 function handleSubmit(event) {
   data.profile.avatarUrl = $avatarURL.value;
@@ -13,9 +12,9 @@ function handleSubmit(event) {
   data.profile.fullName = $fullName.value;
   data.profile.location = $location.value;
   data.profile.bio = $bio.value;
-  localStorage.setItem('profileDataModel', JSON.stringify(data.profile));
 
   $form.reset();
+  $avatarImage.reset();
 }
 
 function handleInputEvent(event) {
@@ -28,3 +27,6 @@ function handleInputEvent(event) {
 
 $form.addEventListener('submit', handleSubmit);
 $avatarURL.addEventListener('input', handleInputEvent);
+window.addEventListener('beforeunload', function (event) {
+  localStorage.setItem('profileDataModel', JSON.stringify(data.profile));
+});
