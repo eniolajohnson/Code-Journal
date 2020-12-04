@@ -1,11 +1,3 @@
-var profileDataModel = {
-  avatarURL: '',
-  username: '',
-  fullname: '',
-  location: '',
-  bio: ''
-};
-
 var $avatarURL = document.querySelector('input');
 var $avatarImage = document.querySelector('.avatar');
 var $form = document.querySelector('form');
@@ -13,14 +5,15 @@ var $userName = document.querySelector('#user-name');
 var $fullName = document.querySelector('#full-name');
 var $location = document.querySelector('#location');
 var $bio = document.querySelector('#bio');
+console.log(data);
 
 function handleSubmit(event) {
-  profileDataModel.avatarURL = $avatarURL.value;
-  profileDataModel.username = $userName.value;
-  profileDataModel.fullname = $fullName.value;
-  profileDataModel.location = $location.value;
-  profileDataModel.bio = $bio.value;
-  localStorage.setItem('profileDataModel', JSON.stringify(profileDataModel));
+  data.profile.avatarUrl = $avatarURL.value;
+  data.profile.username = $userName.value;
+  data.profile.fullName = $fullName.value;
+  data.profile.location = $location.value;
+  data.profile.bio = $bio.value;
+  localStorage.setItem('profileDataModel', JSON.stringify(data.profile));
 
   $form.reset();
 }
