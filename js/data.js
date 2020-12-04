@@ -11,3 +11,7 @@ var data = {
   },
   entries: []
 };
+
+window.addEventListener('beforeunload', function (event) {
+  localStorage.setItem('profileDataModel', JSON.stringify(data.profile));
+});
