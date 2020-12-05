@@ -5,6 +5,8 @@ var $userName = document.querySelector('#user-name');
 var $fullName = document.querySelector('#full-name');
 var $location = document.querySelector('#location');
 var $bio = document.querySelector('#bio');
+var editProfile = document.querySelector('div');
+editProfile.style.display = 'none';
 
 function handleSubmit(event) {
   data.profile.avatarUrl = $avatarURL.value;

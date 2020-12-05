@@ -135,3 +135,44 @@ label {
     margin-left: 1%;
   }
 }
+
+/* Profile Styles */
+
+.profile h1 {
+  width: 70%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.icon-text img {
+  width: 8%;
+  display: inline;
+  padding-bottom: 0;
+  fill: aqua;
+}
+
+.icon-text p {
+  display: inline;
+}
+
+.icon-text div {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 568px){
+  .profile h1{
+    margin-left: 2.5%;
+  }
+
+  .icon-text p {
+    margin-left: 3%;
+  }
+}
